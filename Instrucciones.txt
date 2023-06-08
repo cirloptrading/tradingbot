@@ -1,0 +1,54 @@
+Aquí tienes las instrucciones para utilizar el código en Ubuntu 18 y mantenerlo activo:
+
+1. Instalación de Python:
+   - Verifica si Python ya está instalado en tu sistema ejecutando el comando `python3 --version`. Si no está instalado, ejecuta el siguiente comando para instalarlo:
+     ```
+     sudo apt update
+     sudo apt install python3
+     ```
+
+2. Clonar el repositorio:
+   - Abre una terminal y navega al directorio donde deseas clonar el repositorio.
+   - Ejecuta el siguiente comando para clonar el repositorio en tu sistema:
+     ```
+     git clone https://github.com/tu_usuario/repo.git
+     ```
+   - Esto creará una copia local del repositorio en tu sistema.
+
+3. Instalación de dependencias:
+   - Navega al directorio del repositorio clonado ejecutando el siguiente comando:
+     ```
+     cd repo
+     ```
+   - Ejecuta el siguiente comando para instalar las dependencias:
+     ```
+     pip3 install -r requirements.txt
+     ```
+
+4. Configuración de la API de Binance:
+   - Abre el archivo `codigo_principal.py` con un editor de texto.
+   - Reemplaza los valores `tu_api_key` y `tu_api_secret` con tus propias credenciales de la API de Binance.
+
+5. Ejecución del código:
+   - Para ejecutar el código, utiliza el siguiente comando:
+     ```
+     python3 codigo_principal.py
+     ```
+   - El código comenzará a ejecutarse y realizará el análisis técnico, generará señales de inversión y realizará las operaciones correspondientes en Binance.
+
+6. Mantener el código activo:
+   - Si deseas mantener el código en ejecución constante incluso después de cerrar la terminal, puedes utilizar herramientas como `nohup` o `screen`.
+   - Por ejemplo, para ejecutar el código en segundo plano utilizando `nohup`, puedes ejecutar el siguiente comando:
+     ```
+     nohup python3 codigo_principal.py &
+     ```
+   - Esto ejecutará el código en segundo plano y redirigirá la salida a un archivo llamado `nohup.out`.
+   - Si prefieres utilizar `screen`, puedes ejecutar el siguiente comando:
+     ```
+     screen -S trading_bot
+     ```
+     Luego, dentro de la sesión de `screen`, ejecuta el comando `python3 codigo_principal.py`.
+     Para salir de la sesión de `screen`, presiona `Ctrl + A` seguido de `Ctrl + D`.
+   - Con cualquiera de estas opciones, el código seguirá ejecutándose incluso después de cerrar la terminal.
+
+Recuerda reemplazar `tu_usuario` y `repo` en las instrucciones con tu nombre de usuario de GitHub y el nombre del repositorio, respectivamente. Asegúrate de tener las credenciales correctas de la API de Binance para que el código pueda realizar operaciones correctamente.
